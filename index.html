@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
+      
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
@@ -26,6 +27,7 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+      <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
@@ -67,7 +69,7 @@
             <span class="icon-bar"></span>
           </button>
           <!--<a class="navbar-brand" href="index.html">Spirit8</a>-->
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-responsive image-resize" height="50" width="100" style="margin-top: -25px;" /></a>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-responsive image-resize" height="50" width="100" style="margin-top: -15px;" /></a>
             
         </div>
 
@@ -101,10 +103,11 @@
             <div class="content">
                 <!--<h1>Welcome on <strong><span class="color">Spirit8</span></strong></h1>-->
                 <center>
-                    <img src="img/Sprout_It logo_resized.png" style="margin-top:-125px;" class="img-responsive" /><div style="margin-top:-48px;"><span class="color" style="font-size:25px;">Presents</span></div>
+                    <img src="img/Sprout_It logo_resized.png" style="margin-top:-100px;" class="img-responsive" /><div style="margin-top:-48px;"><span class="color" style="font-size:25px;">Presents</span></div>
                     <img src="img/Vox-E_Resized.png" class="img-responsive" />
 
                 </center>
+                <div class="countdown styled"></div>
                 <a href="#tf-about" style="margin-top:-40px" class="fa fa-angle-down page-scroll"></a>
             </div>
         </div>
@@ -127,7 +130,7 @@
                               <div class="clearfix"></div>
                           </div>
                           <blockquote>
-                              <p class="intro">"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition."</p>
+                              <p class="intro" style="font-family: 'Shadows Into Light Two', cursive; font-size:20px;">"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition."</p>
                               <br />
                               <footer>Steve Jobs</footer>
                           </blockquote>
@@ -859,6 +862,20 @@
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="js/jquery.countdown.js"></script>
+
+      <script type="text/javascript">
+          $(function () {
+              var endDate = "September 9, 2017 23:59:00";
+          $('.countdown.styled').countdown({
+              date: endDate,
+              render: function (data) {
+                  $(this.el).html("<div>" + this.leadingZeros(data.days, 3) + " <span>days</span></div><div>" + this.leadingZeros(data.hours, 2) + " <span>hours</span></div><div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div><div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+              }
+              });
+          });
+      </script>
+      
 
   </body>
 </html>

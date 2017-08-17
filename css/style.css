@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);*/
 
-body, html{
-	font-family: 'Lato', sans-serif;
-	text-rendering: optimizeLegibility !important;
-	-webkit-font-smoothing: antialiased !important;
-	color: #5a5a5a;
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Ubuntu', sans-serif !important;*/
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: #5a5a5a;
 }
 
 h1{
@@ -31,15 +33,17 @@ h5{
 	font-weight: 700;
 	line-height: 20px;
 }
-p{
-	font-family: 'Open Sans', sans-serif;
+p {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Ubuntu', sans-serif !important;*/
 }
-p.intro{
-	font-size: 16px;
-	margin: 12px 0 0;
-	line-height: 24px;
-	font-family: 'Open Sans', sans-serif;
-}
+    p.intro {
+        font-size: 16px;
+        margin: 12px 0 0;
+        line-height: 24px;
+        font-family: 'Open Sans', sans-serif;
+        /*font-family: 'Ubuntu', sans-serif !important;*/
+    }
 a{ color: #FCAC45;}
 a:hover,
 a:focus{
@@ -168,12 +172,13 @@ a.fa.fa-angle-down:hover{
 	padding: 80px 0;
 }
 ul.about-list{ margin: 30px 0 0 ;}
-ul.about-list li{
-	display: block;
-	font-size: 16px;
-	line-height: 30px;
-	font-family: 'Open Sans', sans-serif;
-}
+    ul.about-list li {
+        display: block;
+        font-size: 16px;
+        line-height: 30px;
+        font-family: 'Open Sans', sans-serif;
+        /*font-family: 'Ubuntu', sans-serif !important;*/
+    }
 ul.about-list li span{ 
 	margin-right: 10px;
 }
@@ -483,10 +488,11 @@ ol.type li a.active { font-weight: 700; }
 }
 
 label {
-	float: left;
-	font-size: 12px;
-	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
+    float: left;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Ubuntu', sans-serif !important;*/
 }
 #tf-contact .form-control {
 	display: block;
@@ -643,4 +649,52 @@ color: #ffffff;
 
 strong {
     line-height:30px;
+}
+
+
+
+
+.styled {
+    margin-bottom: 50px;
+}
+
+.styled div {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 40px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1;
+    text-align: right;
+}
+/* IE7 inline-block hack */
+* + html .styled div {
+    display: inline;
+    zoom: 1;
+}
+
+    .styled div:first-child {
+        margin-left: 0;
+    }
+
+    .styled div span {
+        display: block;
+        border-top: 1px solid #cecece;
+        padding-top: 3px;
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+@media only screen and (max-width:320px) {
+    .styled div span {        
+        font-size: 6px;        
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .styled div {
+        font-size: 18px;
+    }
 }
